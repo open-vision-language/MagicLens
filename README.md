@@ -1,5 +1,5 @@
 # MagicLens
-Homepage of MagicLens: Self-Supervised Image Retrieval with Open-Ended Instructions 
+Homepage of MagicLens: Self-Supervised Image Retrieval with Open-Ended Instructions.
 
 This website is adapted from [MMMU](https://mmmu-benchmark.github.io/).
 
