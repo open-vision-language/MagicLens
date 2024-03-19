@@ -233,14 +233,13 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
-          <p>
-            We present MagicLens: a series of image retrieval models.
-            They are built on a key novel insight: image pairs that <b>naturally co-occur on the same web pages</b> contain a wide range of implicit relations, and we can bring those implicit relations explicit by synthesizing open-ended instructions via large multimodal models (LMMs) and large language models (LLMs).
+          <p style="font-size: 18px">
+            We present MagicLens: a series of image retrieval models:
             Trained on 36.7M (query image, instruction, target image) triplets with rich semantic relations mined from the web, a single MagicLens model can achieve comparable or better results on 10 benchmarks of various multimodality-to-image, image-to-image, and text-to-image retrieval tasks than prior state-of-the-art (SOTA) methods.
-            Additional human analyses on a 1.4M-image unseen corpus further demonstrate the diversity of search intents supported by MagicLens.
+            Also, MagicLens can satisfy diverse search intents expressed by open-ended instructions.
             <br>
             <div class="content has-text-centered">
-              <p style="color: #df1a7d; font-size: 20px;">🔥We will open-source the CLIP-based MagicLens models and inference code soon, stay tuned!🔥</p>
+              <p style="color: #df1a7d; font-size: 24px;">🔥We will open-source CLIP-based MagicLens models and inference code soon, stay tuned!🔥</p>
             </div>
           </p>
         </div>
@@ -253,12 +252,14 @@
 <!-- Model SECTION -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-  <h1 class="title is-1 magiclens">
+  <h1 class="title is-2 magiclens">
     <img src="static/images/magiclens_icon.png" style="width:1em;vertical-align: middle" alt="Logo"/>
     <span class="magiclens" style="vertical-align: middle">MagicLens Models</span>
   </h1>
   </div>
 </section>
+
+<br>
 
 <section class="section">
   <div class="container">
@@ -266,26 +267,26 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Data Construction</h2>
         <div class="content has-text-justified">
-          <p>
+          <p style="font-size: 18px">
             We mine naturally occuring image pairs from the same webpages, which implicitly cover diverse image relations, we utlize large multimodal models and large language models to construct 36.7M high quality triples (query image, instruction, text image) for model training.
           </p>
           <img src="static/images/data_construction.png" alt="data construction" class="center">
         </div>
     </div>
     </div>
-
+    <br>
     <div class="columns is-centered has-text-centered">
       <!-- <div class="column is-full-width has-text-centered"> -->
       <div class="column is-four-fifths">
         <h2 class="title is-3">Model Training</h2>
         <div class="content has-text-justified">
-          <p>
-            MagicLens are built upon single-modality encoders initialized from CLIP or CoCa.
+          <p style="font-size: 18px">
+            MagicLens is built upon single-modality encoders initialized from CLIP or CoCa and trained with simple contrastive loss.
             With a dual-encoder architecture, MagicLens can take both image and text inputs to deliver a VL embedding, thus enabling multimodal-to-image and image-to-image retrieval.
             Also, the bottom single-modality encoders can be re-used for text-to-image retrieval, with non-trivial performance gains.
         </p>
         <div class="content has-text-centered">
-          <img src="static/images/model.png" alt="MagicLens Training" class="center">
+          <img class="responsive-image" src="static/images/model.png" alt="MagicLens Training" class="center"  width="50%">
         </div>
           
           
@@ -298,7 +299,7 @@
 <!-- RESULTS SECTION -->
 <section class="hero is-light is-small">
   <div class="hero-body has-text-centered">
-    <h1 class="title is-1 magiclens">Experiment Results</h1>
+    <h1 class="title is-2 magiclens">Experiment Results</h1>
   </div>
 </section>
 <section class="section">
@@ -331,7 +332,7 @@
         <h2 class="title is-3">Multimodality-to-Image</h2>
         <div class="content has-text-justified">
           <div class="content has-text-centered">
-            <img src="static/images/multimodal_to_image_retrieval.png" alt="Multimodality-to-Image Retrieval" class="center">
+            <img class="center" src="static/images/multimodal_to_image_retrieval.png" alt="Multimodality-to-Image Retrieval" >
           </div>
       </div>
     </div>
@@ -348,12 +349,12 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Image-to-Image</h2>
         <div class="content has-text-justified">
-          <p>
+          <!-- <p>
             We can fill default default instructions on the query side to perform image-to-image retrieval tasks.
             For example, we can use "find a natural image of it" to perform sketch-based image-to-image retrieval.
-        </p>
+        </p> -->
         <div class="content has-text-centered">
-          <img src="static/images/image_to_image_retrieval.png" alt="Image-to-Image Retrieval" class="center">
+          <img class="responsive-image" src="static/images/image_to_image_retrieval.png" alt="Image-to-Image Retrieval" width="45%">
         </div>
       </div>
     </div>
@@ -368,11 +369,11 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Text-to-Image</h2>
         <div class="content has-text-centered">
-          <p>
+          <!-- <p>
             We can re-use the bottom single-modality encoders of MagicLens for text-to-image retrieval, with non-trivial performance gains.
-        </p>
+        </p> -->
         <div class="content has-text-centered">
-          <img src="static/images/text_to_image_retrieval.png" alt="Text-to-Image Retrieval" class="center">
+          <img class="center" src="static/images/text_to_image_retrieval.png" alt="Text-to-Image Retrieval" class="center">
         </div>
         </div>
       </div>
