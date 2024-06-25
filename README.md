@@ -1,6 +1,8 @@
 # MagicLens
 Homepage of MagicLens: Self-Supervised Image Retrieval with Open-Ended Instructions [[Paper](https://arxiv.org/abs/2403.19651)] [[Code and Model](https://github.com/google-deepmind/magiclens)].
 
+Official Code Repo for inference and model access is https://github.com/google-deepmind/magiclens.
+
 This website is adapted from [MMMU](https://mmmu-benchmark.github.io/).
 
 # Website License
